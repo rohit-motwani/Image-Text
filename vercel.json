@@ -29,7 +29,7 @@
   "functions": {
     "vc_handler_python": {
       "runtime": "python3.12",
-      "includeFiles": "libjpeg.so.62"  // Corrected to a string
+      "includeFiles": "libjpeg.so.62" 
     }
   }
 }
