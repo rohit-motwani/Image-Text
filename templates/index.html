@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Text Extraction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image to Text Extraction</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="file">Choose an image</label>
+            <input type="file" name="file" id="file" accept="image/*" required>
+            <button type="submit">Extract Text</button>
+        </form>
+        <div class="paste-area" contenteditable="true">
+            <p>Paste an image here (Ctrl+V)</p>
+        </div>
+        <div id="result">
+            {% if extracted_text %}
+            <div class="result">
+                <h2>Extracted Text:</h2>
+                <textarea rows="10" readonly>{{ extracted_text }}</textarea>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
