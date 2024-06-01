@@ -1,24 +1,35 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "app.py",
-        "use": "@vercel/python"
-      },
-      {
-        "src": "static/**/*",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "templates/**/*",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/app.py"
-      }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "app.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "static/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "templates/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/app.py"
+    }
+  ],
+  "env": {
+    "PYTHONUNBUFFERED": "1",
+    "PIP_NO_CACHE_DIR": "off",
+    "PIPENV_YES": "1",
+    "PIPENV_VENV_IN_PROJECT": "1"
+  },
+  "functions": {
+    "vc_handler_python": {
+      "runtime": "python3.12",
+      "includeFiles": ["libjpeg.so.62"]
+    }
   }
-  
+}
