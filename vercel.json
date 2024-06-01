@@ -25,8 +25,5 @@
     "PIP_NO_CACHE_DIR": "off",
     "PIPENV_YES": "1",
     "PIPENV_VENV_IN_PROJECT": "1"
-  },
-  "files": [
-    "libjpeg.so.62"
-  ]
+  }
 }
