@@ -26,10 +26,7 @@
     "PIPENV_YES": "1",
     "PIPENV_VENV_IN_PROJECT": "1"
   },
-  "functions": {
-    "vc_handler_python": {
-      "runtime": "python3.12",
-      "includeFiles": "libjpeg.so.62"
-    }
-  }
+  "files": [
+    "libjpeg.so.62"
+  ]
 }
